@@ -9,46 +9,58 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <link rel="shortcut icon" href="#">
+    <title>Alchemy Calculator</title>
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
+    <div class="calculator">
+        <!-- Addition -->
+        <div id="addition">
+            <p>
+            Addition: 
+            <input type="text" id="addition-input-1"> + 
+            <input type="text" id="addition-input-2"> 
+            <button id="addition-button">Calculate</button> Total: 
+            <span class="calculation" id="addition-display"></span>
+            </p>
         </div>
-    </header>
-    <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
-
-            <content>
+        
+        <!-- Subtraction -->
+        <div id="Subtraction">
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
+            Subtraction: 
+            <input type="text" id="subtraction-input-1"> + 
+            <input type="text" id="subtraction-input-2"> 
+            <button id="subtraction-button">Calculate</button> Total: 
+            <span class="calculation" id="subtraction-display"></span>
             </p>
-            <hr />
+        </div>
+        
+        <!-- Multiplication -->
+        <div id="multiplication">
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis exercitationem?
+            Multiplication: 
+            <input type="text" id="multiplication-input-1"> + 
+            <input type="text" id="multiplication-input-2"> 
+            <button id="multiplication-button">Calculate</button> Total: 
+            <span class="calculation" id="multiplication-display"></span>
             </p>
-
-        </section>
-    </main>
-    <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
-    </footer>
-
-    <script type="module" src="app.js"></script>
+        </div>
+        
+        <!-- Division -->
+        <div id="division">
+            <p>
+            Division: 
+            <input type="text" id="division-input-1"> + 
+            <input type="text" id="division-input-2"> 
+            <button id="division-button">Calculate</button> Total: 
+            <span class="calculation" id="division-display"></span>
+            </p>
+        </div>
+    </div>
+    
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>
