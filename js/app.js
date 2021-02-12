@@ -1,20 +1,26 @@
 // Global Constants and Variables
-const addInput1 = document.getElementById('addition-input-1');
-const addInput2 = document.getElementById('addition-input-2');
-const addButton = document.getElementById('addition-button');
-const addDisplay = document.getElementById('addition-display');
-const subtractionInput1 = document.getElementById('subtraction-input-1');
-const subtractionInput2 = document.getElementById('subtraction-input-2');
-const subtractionButton = document.getElementById('subtraction-button');
-const subtractionDisplay = document.getElementById('subtraction-display');
-const multiplicationInput1 = document.getElementById('multiplication-input-1');
-const multiplicationInput2 = document.getElementById('multiplication-input-2');
-const multiplicationButton = document.getElementById('multiplication-button');
-const multiplicationDisplay = document.getElementById('multiplication-display');
-const divisionInput1 = document.getElementById('division-input-1');
-const divisionInput2 = document.getElementById('division-input-2');
-const divisionButton = document.getElementById('division-button');
-const divisionDisplay = document.getElementById('division-display');
+const addInput1 = document.getElementById('input-addition-1');
+const addInput2 = document.getElementById('input-addition-2');
+const addButton = document.getElementById('button-addition');
+const addDisplay = document.getElementById('display-addition');
+const subtractionInput1 = document.getElementById('input-subtraction-1');
+const subtractionInput2 = document.getElementById('input-subtraction-2');
+const subtractionButton = document.getElementById('button-subtraction');
+const subtractionDisplay = document.getElementById('display-subtraction');
+const multiplicationInput1 = document.getElementById('input-multiplication-1');
+const multiplicationInput2 = document.getElementById('input-multiplication-2');
+const multiplicationButton = document.getElementById('button-multiplication');
+const multiplicationDisplay = document.getElementById('display-multiplication');
+const divisionInput1 = document.getElementById('input-division-1');
+const divisionInput2 = document.getElementById('input-division-2');
+const divisionButton = document.getElementById('button-division');
+const divisionDisplay = document.getElementById('display-division');
+
+// Number Formatter (Testing)
+const formatter = new Intl.NumberFormat('en-US', {
+    minimumFractionDigits: 0,      
+    maximumFractionDigits: 5,
+ });
 
 // import functions and grab DOM elements
 function addCalc() {
@@ -25,8 +31,8 @@ addButton.addEventListener('click', () => {
     var x = parseFloat(addInput1.value);
     var y = parseFloat(addInput2.value);
     var total = x + y;
-  
-    addDisplay.textContent = total;
+    
+    addDisplay.textContent = formatter.format(total);
 });
 
 subtractionButton.addEventListener('click', () => {
@@ -34,7 +40,7 @@ subtractionButton.addEventListener('click', () => {
     var y = parseFloat(subtractionInput2.value);
     var total = x - y;
 
-    subtractionDisplay.textContent = total;
+    subtractionDisplay.textContent = formatter.format(total);
 });
 
 multiplicationButton.addEventListener('click', () => {
@@ -42,7 +48,7 @@ multiplicationButton.addEventListener('click', () => {
     var y = parseFloat(multiplicationInput2.value);
     var total = x * y;
     
-    multiplicationDisplay.textContent = total;
+    multiplicationDisplay.textContent = formatter.format(total);
 });
 
 divisionButton.addEventListener('click', () => {
@@ -50,7 +56,7 @@ divisionButton.addEventListener('click', () => {
     var y = parseFloat(divisionInput2.value);
     var total = x / y;
       
-    divisionDisplay.textContent = total;
+    divisionDisplay.textContent = formatter.format(total);
 });
 
 

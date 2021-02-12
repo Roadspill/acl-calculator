@@ -14,16 +14,52 @@
 </head>
 
 <body>
-    <div class="container-calc">
-        <div class="calculator" id="addition">
-            <div class="grid-div1 pad-10 flex flex-left-center"><h5>Addition</h5></div>
-            <div class="grid-div2 pad-input flex"><input type="number" id="input-add-1"></div>
-            <div class="grid-div3 symbol flex flex-center-center">&plus;</div>
-            <div class="grid-div4 pad-input flex"><input type="number" id="input-add-2"></div>
-            <div class="grid-div5 flex flex-center-center"><button id="button-add">Calculate</button></div>
-            <div class="grid-div6 pad-10 flex flex-left-center"><h5>Total: <span class="calculation" id="display-add"></span></h5></div>
+    <div class="flex flex-col flex-center-center">
+        <div class="title center">
+            <h1>Alchemy Calculator Challenge</h1>
+            <h5>Author: Arnaud "Doug" Ardans II</h5>
+        </div>
+        <div class="container-calc">
+            <div class="calculator" id="addition">
+                <div class="grid-div1 pad-10 flex flex-left-center"><h5>Addition</h5></div>
+                <div class="grid-div2 pad-input flex"><input type="number" id="input-addition-1"></div>
+                <div class="grid-div3 symbol flex flex-center-center">&plus;</div>
+                <div class="grid-div4 pad-input flex"><input type="number" id="input-addition-2"></div>
+                <div class="grid-div5 flex flex-center-center"><button id="button-addition">Calculate</button></div>
+                <div class="grid-div6 pad-10 flex flex-left-center"><h5>Total: <span class="calculation" id="display-addition"></span></h5></div>
+            </div>
+            <div class="calculator" id="subtraction">
+                <div class="grid-div1 pad-10 flex flex-left-center"><h5>Subtraction</h5></div>
+                <div class="grid-div2 pad-input flex"><input type="number" id="input-subtraction-1"></div>
+                <div class="grid-div3 symbol flex flex-center-center">&minus;</div>
+                <div class="grid-div4 pad-input flex"><input type="number" id="input-subtraction-2"></div>
+                <div class="grid-div5 flex flex-center-center"><button id="button-subtraction">Calculate</button></div>
+                <div class="grid-div6 pad-10 flex flex-left-center"><h5>Total: <span class="calculation" id="display-subtraction"></span></h5></div>
+            </div>
+            <div class="calculator" id="multiplication">
+                <div class="grid-div1 pad-10 flex flex-left-center"><h5>Multiplication</h5></div>
+                <div class="grid-div2 pad-input flex"><input type="number" id="input-multiplication-1"></div>
+                <div class="grid-div3 symbol flex flex-center-center">&times;</div>
+                <div class="grid-div4 pad-input flex"><input type="number" id="input-multiplication-2"></div>
+                <div class="grid-div5 flex flex-center-center"><button id="button-multiplication">Calculate</button></div>
+                <div class="grid-div6 pad-10 flex flex-left-center"><h5>Total: <span class="calculation" id="display-multiplication"></span></h5></div>
+            </div>
+            <div class="calculator" id="division">
+                <div class="grid-div1 pad-10 flex flex-left-center"><h5>Division</h5></div>
+                <div class="grid-div2 pad-input flex"><input type="number" id="input-division-1"></div>
+                <div class="grid-div3 symbol flex flex-center-center">&divide;</div>
+                <div class="grid-div4 pad-input flex"><input type="number" id="input-division-2"></div>
+                <div class="grid-div5 flex flex-center-center"><button id="button-division">Calculate</button></div>
+                <div class="grid-div6 pad-10 flex flex-left-center"><h5>Total: <span class="calculation" id="display-division"></span></h5></div>
+            </div>
         </div>
     </div>
+
+    <footer>
+        <div class="centered">
+            <p>Github Repo: <a href="https://github.com/Roadspill/acl-calculator" target="_blank" rel="noopener noreferrer">Roadspill - ACL Calculator Lab</a></p>
+        </div>
+    </footer>
 
     <script type="module" src="js/app.js"></script>
 </body>

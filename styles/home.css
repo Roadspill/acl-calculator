@@ -1,14 +1,17 @@
-/* UX Design Testing */
-[class^="grid-div"] {
-    border: 2px solid black;
+/* Remove Arrows from Number Input */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
-div.calculator {
-    border: 2px solid red;
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
-/* END UX Design Testing */
+/* END Remove Arrows from Number Input */
 
-/* Playing with CSS Grid */
 .container-calc {
     width: 900px;
 }
@@ -20,24 +23,54 @@ div.calculator {
     grid-row-gap: 0px;
     align-items: stretch;
     justify-content: center;
+    /* border: 2px solid grey; */
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 98, 90, 0.4),
+              10px 10px rgba(0, 98, 90, 0.3),
+              15px 15px rgba(0, 98, 90, 0.2),
+              20px 20px rgba(0, 98, 90, 0.1),
+              25px 25px rgba(0, 98, 90, 0.05);
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset; */
+    /* box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset; */
+    margin-bottom: 40px;
 }
+
+
+
+
+div.calculator:last-of-type {
+    margin-bottom: 0;
+}
+
+/* .calculator + .calculator {
+    margin-bottom: 10px;
+} */
 
 .pad-10 {
     padding: 10px;
 }
 
 .pad-input {
-    padding: 3px 10px;
+    padding: 5px 10px;
 }
 
-.grid-div1 { grid-area: 1 / 1 / 2 / 7; }
+.grid-div1 { 
+    grid-area: 1 / 1 / 2 / 7;
+    border-bottom: 2px solid grey;
+}
 .grid-div2 { grid-area: 2 / 1 / 3 / 2; }
 .grid-div3 { grid-area: 2 / 2 / 3 / 3; }
 .grid-div4 { grid-area: 2 / 3 / 3 / 4; }
 .grid-div5 { grid-area: 2 / 4 / 3 / 5; }
-.grid-div6 { grid-area: 2 / 5 / 3 / 6; }
+.grid-div6 {
+    grid-area: 2 / 5 / 3 / 6;
+    border-left: 2px solid grey;
+}
 
 .flex { display: flex; }
+.flex-col {
+    flex-direction: column;
+}
 .flex-center-center {justify-content: center; align-items: center;}
 .flex-left-center {justify-content: flex-start; align-items: center;}
 .flex-h-center {justify-content: center;}
@@ -50,9 +83,34 @@ input[id^="input-"] {
     width: 100%;
 }
 
+.title {
+    padding: 50px 0;
+}
+
+input {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.symbol {
+    font-family:'Courier New', Courier, monospace;
+    height: auto;
+    width: auto;
+    font-size: 32px;
+    line-height: 2em;
+    font-weight: bold;
+}
+
+.calculation {
+    font-family:'Courier New', Courier, monospace;
+    margin-left: 20px;
+    font-weight: 900;
+}
+
 button[id^='button-'] {
     /* padding: 5px 20px; */
-    height: 40px;
+    height: 35px;
     width: 100px;
     border-radius: 5px;
     font-weight: bold;
@@ -67,79 +125,3 @@ button[id^='button-']:hover {
     transition: all 0.5s;
     animation-timing-function: ease-in-out;
 }
-/* END Playing with CSS Grid */
-
-
-/* add home page styles here */
-/* .calculator {
-    width: 900px;
-}
-
-.border {
-    border: 1px solid black;
-}
-
-.flex-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-    height: 60px;
-}
-
-.flex-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-}
-
-.flex-item + .flex-item {
-    margin-left: 5px;
-}
-
-.flex-input-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: stretch;
-}
-
-.flex-input-item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.flex-input-item:nth-child(1),
-.flex-input-item:nth-child(3) {
-    flex-grow 5.5;
-}
-
-input {
-    width: 100%;
-}
-
-.flex-right {
-    justify-content: flex-end;
-}
-
-.bold-sign {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 24px;
-}
-
-.div-title {
-    flex-grow: 2;
-}
-
-.div-input {
-    flex-grow: 8;
-}
-
-.div-button {
-    flex-grow: 1;
-}
-
-.div-Total {
-    flex-grow: 5;
-} */
