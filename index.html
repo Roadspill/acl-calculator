@@ -14,15 +14,17 @@
 </head>
 
 <body>
-    <div class="calculator" id="addition">
-        <div class="grid-div1"><h5>Addition</h5></div>
-        <div class="grid-div2"><input type="number" id="addition-input-1"></div>
-        <div class="grid-div3 symbol flex flex-h-center">&plus;</div>
-        <div class="grid-div4"><input type="number" id="addition-input-2"></div>
-        <div class="grid-div5"><button id="addition-button">Calculate</button></div>
-        <div class="grid-div6"><h5>Total: <span class="calculation" id="addition-display"></span></h5></div>
+    <div class="container-calc">
+        <div class="calculator" id="addition">
+            <div class="grid-div1 pad-10 flex flex-left-center"><h5>Addition</h5></div>
+            <div class="grid-div2 pad-input flex"><input type="number" id="input-add-1"></div>
+            <div class="grid-div3 symbol flex flex-center-center">&plus;</div>
+            <div class="grid-div4 pad-input flex"><input type="number" id="input-add-2"></div>
+            <div class="grid-div5 flex flex-center-center"><button id="button-add">Calculate</button></div>
+            <div class="grid-div6 pad-10 flex flex-left-center"><h5>Total: <span class="calculation" id="display-add"></span></h5></div>
+        </div>
     </div>
-    
+
     <script type="module" src="js/app.js"></script>
 </body>
 

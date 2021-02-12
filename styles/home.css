@@ -1,5 +1,5 @@
 /* UX Design Testing */
-[class^="div-"] {
+[class^="grid-div"] {
     border: 2px solid black;
 }
 
@@ -9,14 +9,25 @@ div.calculator {
 /* END UX Design Testing */
 
 /* Playing with CSS Grid */
+.container-calc {
+    width: 900px;
+}
 .calculator {
     display: grid;
     grid-template-columns: 3.25fr .5fr 3.25fr 2fr 4fr;
     grid-template-rows: 40px 50px;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
+}
+
+.pad-10 {
+    padding: 10px;
+}
+
+.pad-input {
+    padding: 3px 10px;
 }
 
 .grid-div1 { grid-area: 1 / 1 / 2 / 7; }
@@ -27,16 +38,40 @@ div.calculator {
 .grid-div6 { grid-area: 2 / 5 / 3 / 6; }
 
 .flex { display: flex; }
+.flex-center-center {justify-content: center; align-items: center;}
+.flex-left-center {justify-content: flex-start; align-items: center;}
 .flex-h-center {justify-content: center;}
 .flex-h-left {justify-content: flex-start;}
-.flex-v-center {align-items: stretch;}
+.stretch {justify-content: stretch;}
+.flex-v-center {align-items: center;}
+.center {text-align: center;}
 
-    
+input[id^="input-"] {
+    width: 100%;
+}
+
+button[id^='button-'] {
+    /* padding: 5px 20px; */
+    height: 40px;
+    width: 100px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.5s;
+    animation-timing-function: ease-in-out;
+}
+
+button[id^='button-']:hover {
+    height: 45px;
+    width: 110px;
+    background-color: lightblue;
+    transition: all 0.5s;
+    animation-timing-function: ease-in-out;
+}
 /* END Playing with CSS Grid */
 
 
 /* add home page styles here */
-.calculator {
+/* .calculator {
     width: 900px;
 }
 
@@ -107,4 +142,4 @@ input {
 
 .div-Total {
     flex-grow: 5;
-}
+} */
