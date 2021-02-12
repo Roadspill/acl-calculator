@@ -1,4 +1,110 @@
+/* UX Design Testing */
+[class^="div-"] {
+    border: 2px solid black;
+}
+
+div.calculator {
+    border: 2px solid red;
+}
+/* END UX Design Testing */
+
+/* Playing with CSS Grid */
+.calculator {
+    display: grid;
+    grid-template-columns: 3.25fr .5fr 3.25fr 2fr 4fr;
+    grid-template-rows: 40px 50px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-div1 { grid-area: 1 / 1 / 2 / 7; }
+.grid-div2 { grid-area: 2 / 1 / 3 / 2; }
+.grid-div3 { grid-area: 2 / 2 / 3 / 3; }
+.grid-div4 { grid-area: 2 / 3 / 3 / 4; }
+.grid-div5 { grid-area: 2 / 4 / 3 / 5; }
+.grid-div6 { grid-area: 2 / 5 / 3 / 6; }
+
+.flex { display: flex; }
+.flex-h-center {justify-content: center;}
+.flex-h-left {justify-content: flex-start;}
+.flex-v-center {align-items: stretch;}
+
+    
+/* END Playing with CSS Grid */
+
+
 /* add home page styles here */
-/* .calculation {
-  display: none;
-} */
+.calculator {
+    width: 900px;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+.flex-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 60px;
+}
+
+.flex-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.flex-item + .flex-item {
+    margin-left: 5px;
+}
+
+.flex-input-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.flex-input-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-input-item:nth-child(1),
+.flex-input-item:nth-child(3) {
+    flex-grow 5.5;
+}
+
+input {
+    width: 100%;
+}
+
+.flex-right {
+    justify-content: flex-end;
+}
+
+.bold-sign {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 24px;
+}
+
+.div-title {
+    flex-grow: 2;
+}
+
+.div-input {
+    flex-grow: 8;
+}
+
+.div-button {
+    flex-grow: 1;
+}
+
+.div-Total {
+    flex-grow: 5;
+}

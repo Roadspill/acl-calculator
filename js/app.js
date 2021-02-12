@@ -21,9 +21,6 @@ function addCalc() {
 
 }
 
-// initialize state
-
-// set event listeners to update state and DOM
 addButton.addEventListener('click', () => {
     var x = parseFloat(addInput1.value);
     var y = parseFloat(addInput2.value);
@@ -36,7 +33,7 @@ subtractionButton.addEventListener('click', () => {
     var x = parseFloat(subtractionInput1.value);
     var y = parseFloat(subtractionInput2.value);
     var total = x - y;
-    
+
     subtractionDisplay.textContent = total;
 });
 
